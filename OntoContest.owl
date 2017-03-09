@@ -16,16 +16,13 @@
         <ObjectProperty IRI="#Solved_By"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Colouring_Algorithm"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#Uses"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Solution"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Language"/>
+        <Class IRI="#Naive"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Supervised_Learning"/>
@@ -37,52 +34,37 @@
         <Class IRI="#Machine_Learning"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Complex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Imperatives"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#EXPTIME"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CONST"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Recursive"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#naive_search"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Slower_Than"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#Implemented_In"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Dynamic_Programming"/>
+        <Class IRI="#Simple"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Randomized"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Graph_Algorithms"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#bobbys_graph_adventure"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#NP"/>
+        <Class IRI="#Advanced"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Based_On"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Brute_Force"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Divide_And_Conquer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Complexity"/>
+        <Class IRI="#Sorting_Algorithms"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Unsupervised"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Related_To"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Problem"/>
@@ -97,7 +79,85 @@
         <Class IRI="#Medium"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Recursive_Sorting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Branch_And_Bound"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exhaustive_search"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DTIME"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beginner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Solves"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Greedy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colouring_Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Functionals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Optimization_And_Recursion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#naive_search"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Slower_Than"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dynamic_Programming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Randomized"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graph_Algorithms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bobbys_graph_adventure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Random_Sorting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brute_Force"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Divide_And_Conquer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#quadratic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complexity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Related_To"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monte_Carlo"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#P"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Master"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Faster_Than"/>
@@ -109,81 +169,227 @@
         <Class IRI="#Contests"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Branch_And_Bound"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DTIME"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Easy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Computes_In"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Solves"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Difficulty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Greedy"/>
+        <Class IRI="#Intermediate"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Shortest_Path_Algorithm"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="#CONST"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#DTIME"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Complex"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Solution"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Implemented_In"/>
+                    <Class IRI="#Functionals"/>
+                </ObjectSomeValuesFrom>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#Computes_In"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#EXPTIME"/>
+                        <Class IRI="#NEXPTIME"/>
+                        <Class IRI="#NP"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DTIME"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#P"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EXPTIME"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Slower_Than"/>
+                <Class IRI="#P"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Easy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Problem"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Based_On"/>
+                <Class IRI="#Naive"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hard"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Problem"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Based_On"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Graph_Algorithms"/>
+                    <Class IRI="#Machine_Learning"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Master"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Problem"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Based_On"/>
+                <Class IRI="#Machine_Learning"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Medium"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Problem"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Based_On"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Optimization_And_Recursion"/>
+                    <Class IRI="#Randomized"/>
+                    <Class IRI="#Sorting_Algorithms"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NP"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Slower_Than"/>
+                <Class IRI="#EXPTIME"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#P"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#EXPTIME"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Simple"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Solution"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Implemented_In"/>
+                <Class IRI="#Imperatives"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Computes_In"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CONST"/>
+                    <Class IRI="#DTIME"/>
+                    <Class IRI="#P"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Solution"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Based_On"/>
-            <Class IRI="#Brute_Force"/>
+            <ObjectProperty IRI="#Solves"/>
+            <Class IRI="#Problem"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#Advanced"/>
+        <Class IRI="#Contests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Advanced"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <ObjectUnionOf>
+                <Class IRI="#Hard"/>
+                <Class IRI="#Master"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beginner"/>
+        <Class IRI="#Contests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beginner"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Easy"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Branch_And_Bound"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Optimization_And_Recursion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Brute_Force"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Naive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CONST"/>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Colouring_Algorithm"/>
         <Class IRI="#Graph_Algorithms"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DTIME"/>
-        <Class IRI="#Complexity"/>
+        <Class IRI="#Complex"/>
+        <Class IRI="#Solution"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DTIME"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Faster_Than"/>
-            <Class IRI="#P"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Divide_And_Conquer"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Optimization_And_Recursion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dynamic_Programming"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Optimization_And_Recursion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EXPTIME"/>
         <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#EXPTIME"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Faster_Than"/>
-            <Class IRI="#NEXPTIME"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Easy"/>
+        <Class IRI="#Problem"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Easy"/>
-        <Class IRI="#Difficulty"/>
+        <Class IRI="#Functionals"/>
+        <Class IRI="#Languages"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Graph_Algorithms"/>
@@ -191,45 +397,70 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Greedy"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Naive"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hard"/>
-        <Class IRI="#Difficulty"/>
+        <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imperatives"/>
+        <Class IRI="#Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intermediate"/>
+        <Class IRI="#Contests"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intermediate"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#Uses"/>
+            <Class IRI="#Medium"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Machine_Learning"/>
         <Class IRI="#Algorithms"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Master"/>
+        <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Medium"/>
-        <Class IRI="#Difficulty"/>
+        <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monte_Carlo"/>
+        <Class IRI="#Randomized"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NEXPTIME"/>
         <Class IRI="#Complexity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#NEXPTIME"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Faster_Than"/>
-            <Class IRI="#NP"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NP"/>
         <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Naive"/>
+        <Class IRI="#Algorithms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Optimization_And_Recursion"/>
+        <Class IRI="#Algorithms"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#P"/>
         <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#P"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Faster_Than"/>
-            <Class IRI="#EXPTIME"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#Random_Sorting"/>
+        <Class IRI="#Randomized"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Random_Sorting"/>
+        <Class IRI="#Sorting_Algorithms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Randomized"/>
@@ -237,11 +468,27 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Recursive"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Optimization_And_Recursion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recursive_Sorting"/>
+        <Class IRI="#Optimization_And_Recursion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recursive_Sorting"/>
+        <Class IRI="#Sorting_Algorithms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Shortest_Path_Algorithm"/>
         <Class IRI="#Graph_Algorithms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simple"/>
+        <Class IRI="#Solution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sorting_Algorithms"/>
+        <Class IRI="#Algorithms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Supervised_Learning"/>
@@ -253,29 +500,19 @@
     </SubClassOf>
     <DisjointUnion>
         <Class IRI="#Algorithms"/>
-        <Class IRI="#Branch_And_Bound"/>
-        <Class IRI="#Brute_Force"/>
-        <Class IRI="#Divide_And_Conquer"/>
-        <Class IRI="#Dynamic_Programming"/>
-        <Class IRI="#Graph_Algorithms"/>
-        <Class IRI="#Greedy"/>
         <Class IRI="#Machine_Learning"/>
-        <Class IRI="#Randomized"/>
-        <Class IRI="#Recursive"/>
+        <Class IRI="#Naive"/>
+        <ObjectUnionOf>
+            <Class IRI="#Graph_Algorithms"/>
+            <Class IRI="#Optimization_And_Recursion"/>
+            <Class IRI="#Sorting_Algorithms"/>
+        </ObjectUnionOf>
     </DisjointUnion>
     <DisjointUnion>
-        <Class IRI="#Complexity"/>
-        <Class IRI="#DTIME"/>
-        <Class IRI="#EXPTIME"/>
-        <Class IRI="#NEXPTIME"/>
-        <Class IRI="#NP"/>
-        <Class IRI="#P"/>
-    </DisjointUnion>
-    <DisjointUnion>
-        <Class IRI="#Difficulty"/>
-        <Class IRI="#Easy"/>
-        <Class IRI="#Hard"/>
-        <Class IRI="#Medium"/>
+        <Class IRI="#Contests"/>
+        <Class IRI="#Advanced"/>
+        <Class IRI="#Beginner"/>
+        <Class IRI="#Intermediate"/>
     </DisjointUnion>
     <DisjointUnion>
         <Class IRI="#Graph_Algorithms"/>
@@ -283,9 +520,25 @@
         <Class IRI="#Shortest_Path_Algorithm"/>
     </DisjointUnion>
     <DisjointUnion>
+        <Class IRI="#Languages"/>
+        <Class IRI="#Functionals"/>
+        <Class IRI="#Imperatives"/>
+    </DisjointUnion>
+    <DisjointUnion>
         <Class IRI="#Machine_Learning"/>
         <Class IRI="#Supervised_Learning"/>
         <Class IRI="#Unsupervised"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Problem"/>
+        <Class IRI="#Easy"/>
+        <Class IRI="#Hard"/>
+        <Class IRI="#Medium"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Solution"/>
+        <Class IRI="#Complex"/>
+        <Class IRI="#Simple"/>
     </DisjointUnion>
     <ClassAssertion>
         <Class IRI="#Brute_Force"/>
@@ -296,12 +549,13 @@
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
         <NamedIndividual IRI="#naive_search"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Solves"/>
+        <NamedIndividual IRI="#exhaustive_search"/>
+        <NamedIndividual IRI="#bobbys_graph_adventure"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Computes_In"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#Slower_Than"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -352,10 +606,6 @@
         <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <Class IRI="#Complexity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#Implemented_In"/>
         <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
@@ -365,10 +615,6 @@
             <Class IRI="#Problem"/>
             <Class IRI="#Solution"/>
         </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Slower_Than"/>
-        <Class IRI="#Complexity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Solved_By"/>
@@ -391,27 +637,11 @@
         <Class IRI="#Algorithms"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#Computes_In"/>
-        <Class IRI="#Complexity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <Class IRI="#Complexity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Implemented_In"/>
-        <Class IRI="#Language"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#Related_To"/>
         <ObjectUnionOf>
             <Class IRI="#Problem"/>
             <Class IRI="#Solution"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Slower_Than"/>
-        <Class IRI="#Complexity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Solved_By"/>
