@@ -16,10 +16,10 @@
         <ObjectProperty IRI="#Solved_By"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Solution"/>
+        <Class IRI="#Naive"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Naive"/>
+        <Class IRI="#Solution"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Supervised_Learning"/>
@@ -67,10 +67,16 @@
         <Class IRI="#Sorting_Algorithms"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#the_infinite_path_of_hercules"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Unsupervised"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Problem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sweet_shop_sorter"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Hard"/>
@@ -82,13 +88,16 @@
         <Class IRI="#Medium"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#happy_go_lucky"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Polylogarithmic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#brians_good_luck_problem"/>
+        <Class IRI="#Recursive_Sorting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Recursive_Sorting"/>
+        <NamedIndividual IRI="#brians_good_luck_problem"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Branch_And_Bound"/>
@@ -100,10 +109,10 @@
         <NamedIndividual IRI="#exhaustive_search"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Super_Exponential"/>
+        <NamedIndividual IRI="#log_n"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#log_n"/>
+        <Class IRI="#Super_Exponential"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Beginner"/>
@@ -127,13 +136,10 @@
         <ObjectProperty IRI="#Similar_To"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Optimization_And_Recursion"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#naive_search"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Slower_Than"/>
+        <Class IRI="#Optimization_And_Recursion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Languages"/>
@@ -146,6 +152,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Lists"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#what_in_tarnation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#binary_tree"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Graphs"/>
@@ -175,6 +187,9 @@
         <NamedIndividual IRI="#ryans_sales_pitch"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#what_is_love"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Exponential"/>
     </Declaration>
     <Declaration>
@@ -182,9 +197,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Monte_Carlo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Faster_Than"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Master"/>
@@ -211,7 +223,13 @@
         <Class IRI="#Intermediate"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#derpington_is_great"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#haskell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#acm_icpc_2010"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Shortest_Path_Algorithm"/>
@@ -268,6 +286,10 @@
                     <ObjectProperty IRI="#Based_On"/>
                     <Class IRI="#Naive"/>
                 </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Similar_To"/>
+                    <Class IRI="#Easy"/>
+                </ObjectSomeValuesFrom>
                 <DataSomeValuesFrom>
                     <DataProperty IRI="#Has_Attempts"/>
                     <DatatypeRestriction>
@@ -301,6 +323,10 @@
                         <Class IRI="#Machine_Learning"/>
                     </ObjectUnionOf>
                 </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Similar_To"/>
+                    <Class IRI="#Hard"/>
+                </ObjectSomeValuesFrom>
                 <DataSomeValuesFrom>
                     <DataProperty IRI="#Has_Attempts"/>
                     <DatatypeRestriction>
@@ -324,13 +350,6 @@
                 </DataSomeValuesFrom>
             </ObjectUnionOf>
         </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Machine_Learning"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Used_In"/>
-            <Class IRI="#Complex"/>
-        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Master"/>
@@ -361,6 +380,10 @@
                         <Class IRI="#Sorting_Algorithms"/>
                     </ObjectUnionOf>
                 </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Similar_To"/>
+                    <Class IRI="#Medium"/>
+                </ObjectSomeValuesFrom>
                 <DataSomeValuesFrom>
                     <DataProperty IRI="#Has_Attempts"/>
                     <DatatypeRestriction>
@@ -387,13 +410,6 @@
                 </DataSomeValuesFrom>
             </ObjectUnionOf>
         </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Naive"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#Used_In"/>
-            <Class IRI="#Simple"/>
-        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Simple"/>
@@ -485,14 +501,15 @@
         <Class IRI="#Problem"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Easy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Similar_To"/>
+            <Class IRI="#Easy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Exponential"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#Super_Exponential"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Factorithmic"/>
@@ -555,23 +572,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Polylogarithmic"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#Polylogarithmic"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Polynomial"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#Exponential"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Random_Sorting"/>
@@ -618,13 +623,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Super_Exponential"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#Factorithmic"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Supervised_Learning"/>
@@ -694,8 +693,28 @@
         <Class IRI="#Simple"/>
     </DisjointUnion>
     <ClassAssertion>
+        <Class IRI="#Contests"/>
+        <NamedIndividual IRI="#acm_icpc_2010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphs"/>
+        <NamedIndividual IRI="#binary_tree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#derpington_is_great"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Easy"/>
+        <NamedIndividual IRI="#happy_go_lucky"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Functionals"/>
         <NamedIndividual IRI="#haskell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Polylogarithmic"/>
+        <NamedIndividual IRI="#log_n"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Factorithmic"/>
@@ -704,6 +723,14 @@
     <ClassAssertion>
         <Class IRI="#Brute_Force"/>
         <NamedIndividual IRI="#naive_search"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Polynomial"/>
+        <NamedIndividual IRI="#quadratic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Easy"/>
+        <NamedIndividual IRI="#sweet_shop_sorter"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Exponential"/>
@@ -717,6 +744,16 @@
         <NamedIndividual IRI="#haskell"/>
         <NamedIndividual IRI="#c++"/>
     </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Lists"/>
+        <NamedIndividual IRI="#acm_icpc_2010"/>
+        <NamedIndividual IRI="#derpington_is_great"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Lists"/>
+        <NamedIndividual IRI="#acm_icpc_2010"/>
+        <NamedIndividual IRI="#what_is_love"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Computes_In"/>
         <NamedIndividual IRI="#binary_tree_search"/>
@@ -738,6 +775,11 @@
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Based_On"/>
+        <NamedIndividual IRI="#naive_connected_graph_check"/>
+        <NamedIndividual IRI="#binary_tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Computes_In"/>
         <NamedIndividual IRI="#naive_connected_graph_check"/>
         <NamedIndividual IRI="#n_factorial"/>
@@ -745,17 +787,22 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Implemented_In"/>
         <NamedIndividual IRI="#naive_connected_graph_check"/>
-        <NamedIndividual IRI="#c++"/>
+        <NamedIndividual IRI="#haskell"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <NamedIndividual IRI="#quadratic"/>
-        <NamedIndividual IRI="#two_power_n"/>
+        <ObjectProperty IRI="#Similar_To"/>
+        <NamedIndividual IRI="#the_infinite_path_of_hercules"/>
+        <NamedIndividual IRI="#bobbys_graph_adventure"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#Slower_Than"/>
-        <NamedIndividual IRI="#quadratic"/>
-        <NamedIndividual IRI="#log_n"/>
+        <ObjectProperty IRI="#Similar_To"/>
+        <NamedIndividual IRI="#what_in_tarnation"/>
+        <NamedIndividual IRI="#sweet_shop_sorter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Similar_To"/>
+        <NamedIndividual IRI="#what_is_love"/>
+        <NamedIndividual IRI="#derpington_is_great"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Has_Success"/>
@@ -784,10 +831,6 @@
         <ObjectProperty IRI="#Used_In"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <ObjectProperty IRI="#Slower_Than"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#Listed_In"/>
         <ObjectProperty IRI="#Lists"/>
     </InverseObjectProperties>
@@ -799,21 +842,9 @@
         <ObjectProperty IRI="#Solved_By"/>
         <ObjectProperty IRI="#Solves"/>
     </InverseObjectProperties>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="#Similar_To"/>
-    </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#Implemented_In"/>
     </AsymmetricObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#Faster_Than"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#Similar_To"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#Slower_Than"/>
-    </TransitiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#Implemented_In"/>
     </IrreflexiveObjectProperty>
@@ -829,10 +860,6 @@
         <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <Class IRI="#Complexity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#Implemented_In"/>
         <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
@@ -846,10 +873,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Similar_To"/>
-        <ObjectUnionOf>
-            <Class IRI="#Problem"/>
-            <Class IRI="#Solution"/>
-        </ObjectUnionOf>
+        <Class IRI="#Problem"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Solved_By"/>
@@ -868,10 +892,6 @@
         <Class IRI="#Paradigm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#Faster_Than"/>
-        <Class IRI="#Complexity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#Listed_In"/>
         <Class IRI="#Contests"/>
     </ObjectPropertyRange>
@@ -881,10 +901,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Similar_To"/>
-        <ObjectUnionOf>
-            <Class IRI="#Problem"/>
-            <Class IRI="#Solution"/>
-        </ObjectUnionOf>
+        <Class IRI="#Problem"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Solved_By"/>
@@ -927,6 +944,116 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Advanced</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lists problems that are only Hard or Master level problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Based_On</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A problem or solution may be based on a specified class of paradigm or problem domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Beginner</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contests that list only easy problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Complex</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A solution that is implemented in a functional language, runs in a long or non-deterinistic fashion, not a naive paradigm and solves hard, medium, or master level problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Complexity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the time complexity of a solution. Subcallses are disjoint and range from shorter running times (such as polylogarithmic) to longer running times (such as Factorithmetic).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Computes_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A solution may have a particular class of time complexity such as polynomial or exponential, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contests</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines qualitative list for organizing problem difficulty in a contest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Easy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Easy problems are those that are based on Naive solutions, or have high submissions, or a large success rate of correct solutions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Exponential</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a solution that runs in Exponential time (i.e. it is fatser than Super_Exponential, but slowetr than Polynomieal).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Factorithmic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a solution that runs in Factorithmic time (i.e. it is the slowest solution available).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Functionals</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Functional Programming languages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hard</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hard problems are those that are graph related, machine learning related, not submitted very often, or do not have a high rate of correct solutions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Has_Attempts</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The number of solutions submitted for a given contest problem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Has_Success</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Percentage of submitted scores that are correct</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Imperatives</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Imperative Programming Languages such as OOP based languages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Implemented_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A solution may be implemented in a specified programming language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Intermediate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lists only medium level problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Languages</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the programming languages that can be used in a problem and solution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Listed_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A problem may be listed in a specified programming contest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lists</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A contest lists a set of problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Master</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A subset of hard problems that are machine learning related and quite challenging as a result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medium</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A difficulty that lies in between the definitions of hard and easy, have a moderate submission count, and a moderate success ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Paradigm</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Paradigm encompasses the set of algorithms, problem domains, and data structures that a problem may be based on (Based_On) and which a solution uses (Based_On)</Literal>
     </AnnotationAssertion>
@@ -934,6 +1061,56 @@
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#Paradigm</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Zhukova, Anna, et al. &quot;Kinetic Simulation Algorithm Ontology.&quot; (2011).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Polylogarithmic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a solution that runs in Polylogarithmic time (i.e. it is the fastest solution available).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Polynomial</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a solution that runs in Polynomial time (i.e. it is fatser than Exponential, but slowetr than Polylogarithmic).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Problem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Problem is a qualitative meausre for a problem&apos;s difficulty. Classifications are based on the type of algorithm, number of attempts at the algorithm, and the success rate of solving the algorithm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Similar_To</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A problem may be similar to another problem or a solution may be similar to another solution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Simple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Strictly implemented in imperative languages, based on a naive paradigm and possibly compute in simple runtimes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Solution</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines a solution to be an object that can also be described with a running time, a paradigm and a difficulty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Solved_By</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A problem may be solved by a particular solution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Solves</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A solution will solve a particular set of problems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Super_Exponential</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a solution that runs in Super_Exponential time (i.e. it is fatser than Factorithmic, but slowetr than Exponential).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Used_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A paradigm may be used in a problem or solution</Literal>
     </AnnotationAssertion>
 </Ontology>
 
