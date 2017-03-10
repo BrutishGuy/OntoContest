@@ -22,9 +22,6 @@
         <Class IRI="#Naive"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Uses"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Supervised_Learning"/>
     </Declaration>
     <Declaration>
@@ -58,6 +55,9 @@
         <ObjectProperty IRI="#Listed_In"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#naive_connected_graph_check"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Based_On"/>
     </Declaration>
     <Declaration>
@@ -76,9 +76,6 @@
         <Class IRI="#Hard"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Algorithms"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#Has_Attempts"/>
     </Declaration>
     <Declaration>
@@ -95,6 +92,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Branch_And_Bound"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Structures"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#exhaustive_search"/>
@@ -118,7 +118,13 @@
         <Class IRI="#Colouring_Algorithm"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#n_factorial"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Functionals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Similar_To"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Optimization_And_Recursion"/>
@@ -142,7 +148,7 @@
         <ObjectProperty IRI="#Lists"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Graph_Algorithms"/>
+        <Class IRI="#Graphs"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
@@ -172,9 +178,6 @@
         <Class IRI="#Exponential"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Related_To"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#two_power_n"/>
     </Declaration>
     <Declaration>
@@ -193,7 +196,13 @@
         <Class IRI="#Contests"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#c++"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Easy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paradigm"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Computes_In"/>
@@ -209,23 +218,39 @@
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Complex"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Solution"/>
-            <ObjectUnionOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#Computes_In"/>
-                    <ObjectUnionOf>
-                        <Class IRI="#Exponential"/>
-                        <Class IRI="#Factorithmic"/>
-                        <Class IRI="#Super_Exponential"/>
-                    </ObjectUnionOf>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty IRI="#Implemented_In"/>
-                    <Class IRI="#Functionals"/>
-                </ObjectSomeValuesFrom>
-            </ObjectUnionOf>
-        </ObjectIntersectionOf>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <Class IRI="#Solution"/>
+                <ObjectUnionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#Computes_In"/>
+                        <ObjectUnionOf>
+                            <Class IRI="#Exponential"/>
+                            <Class IRI="#Factorithmic"/>
+                            <Class IRI="#Super_Exponential"/>
+                        </ObjectUnionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#Implemented_In"/>
+                        <Class IRI="#Functionals"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectUnionOf>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#Based_On"/>
+                        <Class IRI="#Naive"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+            </ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Solves"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Hard"/>
+                    <Class IRI="#Master"/>
+                    <Class IRI="#Medium"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Contests"/>
@@ -272,7 +297,7 @@
                 <ObjectSomeValuesFrom>
                     <ObjectProperty IRI="#Based_On"/>
                     <ObjectUnionOf>
-                        <Class IRI="#Graph_Algorithms"/>
+                        <Class IRI="#Graphs"/>
                         <Class IRI="#Machine_Learning"/>
                     </ObjectUnionOf>
                 </ObjectSomeValuesFrom>
@@ -301,6 +326,13 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Machine_Learning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Used_In"/>
+            <Class IRI="#Complex"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Master"/>
         <ObjectIntersectionOf>
             <Class IRI="#Problem"/>
@@ -309,7 +341,7 @@
                 <ObjectIntersectionOf>
                     <Class IRI="#Machine_Learning"/>
                     <ObjectComplementOf>
-                        <Class IRI="#Graph_Algorithms"/>
+                        <Class IRI="#Graphs"/>
                     </ObjectComplementOf>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
@@ -323,6 +355,7 @@
                 <ObjectSomeValuesFrom>
                     <ObjectProperty IRI="#Based_On"/>
                     <ObjectUnionOf>
+                        <Class IRI="#Data_Structures"/>
                         <Class IRI="#Optimization_And_Recursion"/>
                         <Class IRI="#Randomized"/>
                         <Class IRI="#Sorting_Algorithms"/>
@@ -356,20 +389,35 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Naive"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Used_In"/>
+            <Class IRI="#Simple"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Simple"/>
         <ObjectIntersectionOf>
             <Class IRI="#Solution"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Computes_In"/>
-                <ObjectUnionOf>
-                    <Class IRI="#Polylogarithmic"/>
-                    <Class IRI="#Polynomial"/>
-                </ObjectUnionOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Implemented_In"/>
-                <Class IRI="#Imperatives"/>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#Computes_In"/>
+                        <ObjectUnionOf>
+                            <Class IRI="#Polylogarithmic"/>
+                            <Class IRI="#Polynomial"/>
+                        </ObjectUnionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#Implemented_In"/>
+                        <Class IRI="#Imperatives"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Solves"/>
+                    <Class IRI="#Easy"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -414,11 +462,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Colouring_Algorithm"/>
-        <Class IRI="#Graph_Algorithms"/>
+        <Class IRI="#Graphs"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Complex"/>
         <Class IRI="#Solution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Structures"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Divide_And_Conquer"/>
@@ -451,8 +503,8 @@
         <Class IRI="#Languages"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Graph_Algorithms"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Graphs"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Greedy"/>
@@ -479,7 +531,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Machine_Learning"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Master"/>
@@ -495,11 +547,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Naive"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Optimization_And_Recursion"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Polylogarithmic"/>
@@ -531,7 +583,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Randomized"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Recursive"/>
@@ -547,15 +599,22 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Shortest_Path_Algorithm"/>
-        <Class IRI="#Graph_Algorithms"/>
+        <Class IRI="#Graphs"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Simple"/>
         <Class IRI="#Solution"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Solution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Based_On"/>
+            <Class IRI="#Paradigm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Sorting_Algorithms"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Super_Exponential"/>
@@ -575,16 +634,14 @@
         <Class IRI="#Unsupervised"/>
         <Class IRI="#Machine_Learning"/>
     </SubClassOf>
-    <DisjointUnion>
-        <Class IRI="#Algorithms"/>
-        <Class IRI="#Machine_Learning"/>
-        <Class IRI="#Naive"/>
-        <ObjectUnionOf>
-            <Class IRI="#Graph_Algorithms"/>
-            <Class IRI="#Optimization_And_Recursion"/>
-            <Class IRI="#Sorting_Algorithms"/>
-        </ObjectUnionOf>
-    </DisjointUnion>
+    <DisjointClasses>
+        <Class IRI="#Complexity"/>
+        <Class IRI="#Contests"/>
+        <Class IRI="#Languages"/>
+        <Class IRI="#Paradigm"/>
+        <Class IRI="#Problem"/>
+        <Class IRI="#Solution"/>
+    </DisjointClasses>
     <DisjointUnion>
         <Class IRI="#Complexity"/>
         <Class IRI="#Exponential"/>
@@ -600,7 +657,7 @@
         <Class IRI="#Intermediate"/>
     </DisjointUnion>
     <DisjointUnion>
-        <Class IRI="#Graph_Algorithms"/>
+        <Class IRI="#Graphs"/>
         <Class IRI="#Colouring_Algorithm"/>
         <Class IRI="#Shortest_Path_Algorithm"/>
     </DisjointUnion>
@@ -613,6 +670,17 @@
         <Class IRI="#Machine_Learning"/>
         <Class IRI="#Supervised_Learning"/>
         <Class IRI="#Unsupervised"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Paradigm"/>
+        <Class IRI="#Data_Structures"/>
+        <Class IRI="#Machine_Learning"/>
+        <Class IRI="#Naive"/>
+        <ObjectUnionOf>
+            <Class IRI="#Graphs"/>
+            <Class IRI="#Optimization_And_Recursion"/>
+            <Class IRI="#Sorting_Algorithms"/>
+        </ObjectUnionOf>
     </DisjointUnion>
     <DisjointUnion>
         <Class IRI="#Problem"/>
@@ -630,6 +698,10 @@
         <NamedIndividual IRI="#haskell"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Factorithmic"/>
+        <NamedIndividual IRI="#n_factorial"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Brute_Force"/>
         <NamedIndividual IRI="#naive_search"/>
     </ClassAssertion>
@@ -637,6 +709,14 @@
         <Class IRI="#Exponential"/>
         <NamedIndividual IRI="#two_power_n"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Imperatives"/>
+        <NamedIndividual IRI="#c++"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#haskell"/>
+        <NamedIndividual IRI="#c++"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Computes_In"/>
         <NamedIndividual IRI="#binary_tree_search"/>
@@ -656,6 +736,16 @@
         <ObjectProperty IRI="#Solves"/>
         <NamedIndividual IRI="#exhaustive_search"/>
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Computes_In"/>
+        <NamedIndividual IRI="#naive_connected_graph_check"/>
+        <NamedIndividual IRI="#n_factorial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Implemented_In"/>
+        <NamedIndividual IRI="#naive_connected_graph_check"/>
+        <NamedIndividual IRI="#c++"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Faster_Than"/>
@@ -690,6 +780,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#Based_On"/>
+        <ObjectProperty IRI="#Used_In"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#Faster_Than"/>
         <ObjectProperty IRI="#Slower_Than"/>
     </InverseObjectProperties>
@@ -698,19 +792,15 @@
         <ObjectProperty IRI="#Lists"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#Related_To"/>
-        <ObjectProperty IRI="#Related_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#Solved_By"/>
         <ObjectProperty IRI="#Solves"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#Used_In"/>
-        <ObjectProperty IRI="#Uses"/>
-    </InverseObjectProperties>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="#Related_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
     </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#Implemented_In"/>
@@ -719,7 +809,7 @@
         <ObjectProperty IRI="#Faster_Than"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="#Related_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#Slower_Than"/>
@@ -729,7 +819,10 @@
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Based_On"/>
-        <Class IRI="#Problem"/>
+        <ObjectUnionOf>
+            <Class IRI="#Problem"/>
+            <Class IRI="#Solution"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Computes_In"/>
@@ -752,7 +845,7 @@
         <Class IRI="#Contests"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Related_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
         <ObjectUnionOf>
             <Class IRI="#Problem"/>
             <Class IRI="#Solution"/>
@@ -768,15 +861,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Used_In"/>
-        <Class IRI="#Algorithms"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Uses"/>
-        <Class IRI="#Solution"/>
+        <Class IRI="#Paradigm"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Based_On"/>
-        <Class IRI="#Algorithms"/>
+        <Class IRI="#Paradigm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Faster_Than"/>
@@ -791,7 +880,7 @@
         <Class IRI="#Problem"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#Related_To"/>
+        <ObjectProperty IRI="#Similar_To"/>
         <ObjectUnionOf>
             <Class IRI="#Problem"/>
             <Class IRI="#Solution"/>
@@ -807,11 +896,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Used_In"/>
-        <Class IRI="#Solution"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Uses"/>
-        <Class IRI="#Algorithms"/>
+        <ObjectUnionOf>
+            <Class IRI="#Problem"/>
+            <Class IRI="#Solution"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#Has_Attempts"/>
@@ -837,6 +925,16 @@
             </FacetRestriction>
         </DatatypeRestriction>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Paradigm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Paradigm encompasses the set of algorithms, problem domains, and data structures that a problem may be based on (Based_On) and which a solution uses (Based_On)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Paradigm</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Zhukova, Anna, et al. &quot;Kinetic Simulation Algorithm Ontology.&quot; (2011).</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
