@@ -16,19 +16,16 @@
         <ObjectProperty IRI="#Solved_By"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Uses"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Solution"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Naive"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Supervised_Learning"/>
+        <ObjectProperty IRI="#Uses"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#NEXPTIME"/>
+        <Class IRI="#Supervised_Learning"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Machine_Learning"/>
@@ -40,13 +37,13 @@
         <Class IRI="#Imperatives"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#EXPTIME"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CONST"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Recursive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#binary_tree_search"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polynomial"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Implemented_In"/>
@@ -58,7 +55,13 @@
         <Class IRI="#Advanced"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Listed_In"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Based_On"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Factorithmic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sorting_Algorithms"/>
@@ -70,13 +73,22 @@
         <Class IRI="#Problem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Algorithms"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Hard"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Algorithms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Has_Attempts"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polylogarithmic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#brians_good_luck_problem"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Recursive_Sorting"/>
@@ -88,7 +100,10 @@
         <NamedIndividual IRI="#exhaustive_search"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DTIME"/>
+        <Class IRI="#Super_Exponential"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#log_n"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Beginner"/>
@@ -124,6 +139,9 @@
         <Class IRI="#Randomized"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Lists"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Graph_Algorithms"/>
     </Declaration>
     <Declaration>
@@ -133,34 +151,40 @@
         <Class IRI="#Random_Sorting"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#NP"/>
+        <DataProperty IRI="#Has_Success"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Brute_Force"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Divide_And_Conquer"/>
+        <NamedIndividual IRI="#quadratic"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#quadratic"/>
+        <Class IRI="#Divide_And_Conquer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Complexity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ryans_sales_pitch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Exponential"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Related_To"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#two_power_n"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Monte_Carlo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#P"/>
+        <ObjectProperty IRI="#Faster_Than"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Master"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Faster_Than"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Used_In"/>
@@ -178,79 +202,102 @@
         <Class IRI="#Intermediate"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#haskell"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Shortest_Path_Algorithm"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#CONST"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#DTIME"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Complex"/>
         <ObjectIntersectionOf>
             <Class IRI="#Solution"/>
             <ObjectUnionOf>
                 <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Computes_In"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Exponential"/>
+                        <Class IRI="#Factorithmic"/>
+                        <Class IRI="#Super_Exponential"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
                     <ObjectProperty IRI="#Implemented_In"/>
                     <Class IRI="#Functionals"/>
                 </ObjectSomeValuesFrom>
-                <ObjectAllValuesFrom>
-                    <ObjectProperty IRI="#Computes_In"/>
-                    <ObjectUnionOf>
-                        <Class IRI="#EXPTIME"/>
-                        <Class IRI="#NEXPTIME"/>
-                        <Class IRI="#NP"/>
-                    </ObjectUnionOf>
-                </ObjectAllValuesFrom>
             </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#DTIME"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#P"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#EXPTIME"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Slower_Than"/>
-                <Class IRI="#P"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#Contests"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Lists"/>
+            <Class IRI="#Problem"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Easy"/>
         <ObjectIntersectionOf>
             <Class IRI="#Problem"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Based_On"/>
-                <Class IRI="#Naive"/>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Based_On"/>
+                    <Class IRI="#Naive"/>
+                </ObjectSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Attempts"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Success"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">80.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Hard"/>
         <ObjectIntersectionOf>
             <Class IRI="#Problem"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Based_On"/>
-                <ObjectUnionOf>
-                    <Class IRI="#Graph_Algorithms"/>
-                    <Class IRI="#Machine_Learning"/>
-                </ObjectUnionOf>
-            </ObjectSomeValuesFrom>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Based_On"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Graph_Algorithms"/>
+                        <Class IRI="#Machine_Learning"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Attempts"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Success"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">10.0</Literal>
+                        </FacetRestriction>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -259,7 +306,12 @@
             <Class IRI="#Problem"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#Based_On"/>
-                <Class IRI="#Machine_Learning"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Machine_Learning"/>
+                    <ObjectComplementOf>
+                        <Class IRI="#Graph_Algorithms"/>
+                    </ObjectComplementOf>
+                </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -267,34 +319,40 @@
         <Class IRI="#Medium"/>
         <ObjectIntersectionOf>
             <Class IRI="#Problem"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#Based_On"/>
-                <ObjectUnionOf>
-                    <Class IRI="#Optimization_And_Recursion"/>
-                    <Class IRI="#Randomized"/>
-                    <Class IRI="#Sorting_Algorithms"/>
-                </ObjectUnionOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#NP"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Slower_Than"/>
-                <Class IRI="#EXPTIME"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#P"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Complexity"/>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Faster_Than"/>
-                <Class IRI="#EXPTIME"/>
-            </ObjectAllValuesFrom>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#Based_On"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#Optimization_And_Recursion"/>
+                        <Class IRI="#Randomized"/>
+                        <Class IRI="#Sorting_Algorithms"/>
+                    </ObjectUnionOf>
+                </ObjectSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Attempts"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+                        </FacetRestriction>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#Has_Success"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:double"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+                        </FacetRestriction>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">80.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -302,17 +360,16 @@
         <ObjectIntersectionOf>
             <Class IRI="#Solution"/>
             <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#Computes_In"/>
+                <ObjectUnionOf>
+                    <Class IRI="#Polylogarithmic"/>
+                    <Class IRI="#Polynomial"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#Implemented_In"/>
                 <Class IRI="#Imperatives"/>
             </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty IRI="#Computes_In"/>
-                <ObjectUnionOf>
-                    <Class IRI="#CONST"/>
-                    <Class IRI="#DTIME"/>
-                    <Class IRI="#P"/>
-                </ObjectUnionOf>
-            </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -329,7 +386,7 @@
     <SubClassOf>
         <Class IRI="#Advanced"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#Uses"/>
+            <ObjectProperty IRI="#Lists"/>
             <ObjectUnionOf>
                 <Class IRI="#Hard"/>
                 <Class IRI="#Master"/>
@@ -343,7 +400,7 @@
     <SubClassOf>
         <Class IRI="#Beginner"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#Uses"/>
+            <ObjectProperty IRI="#Lists"/>
             <Class IRI="#Easy"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
@@ -356,20 +413,12 @@
         <Class IRI="#Naive"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CONST"/>
-        <Class IRI="#Complexity"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Colouring_Algorithm"/>
         <Class IRI="#Graph_Algorithms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Complex"/>
         <Class IRI="#Solution"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DTIME"/>
-        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Divide_And_Conquer"/>
@@ -380,12 +429,22 @@
         <Class IRI="#Optimization_And_Recursion"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#EXPTIME"/>
-        <Class IRI="#Complexity"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Easy"/>
         <Class IRI="#Problem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Exponential"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#Super_Exponential"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Factorithmic"/>
+        <Class IRI="#Complexity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Functionals"/>
@@ -414,7 +473,7 @@
     <SubClassOf>
         <Class IRI="#Intermediate"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#Uses"/>
+            <ObjectProperty IRI="#Lists"/>
             <Class IRI="#Medium"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
@@ -435,14 +494,6 @@
         <Class IRI="#Randomized"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#NEXPTIME"/>
-        <Class IRI="#Complexity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#NP"/>
-        <Class IRI="#Complexity"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Naive"/>
         <Class IRI="#Algorithms"/>
     </SubClassOf>
@@ -451,8 +502,24 @@
         <Class IRI="#Algorithms"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#P"/>
-        <Class IRI="#Complexity"/>
+        <Class IRI="#Polylogarithmic"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#Polylogarithmic"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polynomial"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#Exponential"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Random_Sorting"/>
@@ -491,6 +558,16 @@
         <Class IRI="#Algorithms"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Super_Exponential"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Complexity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#Faster_Than"/>
+                <Class IRI="#Factorithmic"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Supervised_Learning"/>
         <Class IRI="#Machine_Learning"/>
     </SubClassOf>
@@ -507,6 +584,14 @@
             <Class IRI="#Optimization_And_Recursion"/>
             <Class IRI="#Sorting_Algorithms"/>
         </ObjectUnionOf>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Complexity"/>
+        <Class IRI="#Exponential"/>
+        <Class IRI="#Factorithmic"/>
+        <Class IRI="#Polylogarithmic"/>
+        <Class IRI="#Polynomial"/>
+        <Class IRI="#Super_Exponential"/>
     </DisjointUnion>
     <DisjointUnion>
         <Class IRI="#Contests"/>
@@ -541,9 +626,27 @@
         <Class IRI="#Simple"/>
     </DisjointUnion>
     <ClassAssertion>
+        <Class IRI="#Functionals"/>
+        <NamedIndividual IRI="#haskell"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Brute_Force"/>
         <NamedIndividual IRI="#naive_search"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Exponential"/>
+        <NamedIndividual IRI="#two_power_n"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Computes_In"/>
+        <NamedIndividual IRI="#binary_tree_search"/>
+        <NamedIndividual IRI="#log_n"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Implemented_In"/>
+        <NamedIndividual IRI="#binary_tree_search"/>
+        <NamedIndividual IRI="#haskell"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#Based_On"/>
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
@@ -554,6 +657,26 @@
         <NamedIndividual IRI="#exhaustive_search"/>
         <NamedIndividual IRI="#bobbys_graph_adventure"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Faster_Than"/>
+        <NamedIndividual IRI="#quadratic"/>
+        <NamedIndividual IRI="#two_power_n"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Slower_Than"/>
+        <NamedIndividual IRI="#quadratic"/>
+        <NamedIndividual IRI="#log_n"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Has_Success"/>
+        <NamedIndividual IRI="#brians_good_luck_problem"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">90.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Has_Attempts"/>
+        <NamedIndividual IRI="#ryans_sales_pitch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Computes_In"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -571,6 +694,10 @@
         <ObjectProperty IRI="#Slower_Than"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#Listed_In"/>
+        <ObjectProperty IRI="#Lists"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#Related_To"/>
         <ObjectProperty IRI="#Related_To"/>
     </InverseObjectProperties>
@@ -582,6 +709,9 @@
         <ObjectProperty IRI="#Used_In"/>
         <ObjectProperty IRI="#Uses"/>
     </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#Related_To"/>
+    </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#Implemented_In"/>
     </AsymmetricObjectProperty>
@@ -606,8 +736,20 @@
         <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Faster_Than"/>
+        <Class IRI="#Complexity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#Implemented_In"/>
         <Class IRI="#Solution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Listed_In"/>
+        <Class IRI="#Problem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Lists"/>
+        <Class IRI="#Contests"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Related_To"/>
@@ -626,17 +768,29 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Used_In"/>
-        <Class IRI="#Problem"/>
+        <Class IRI="#Algorithms"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Uses"/>
-        <Class IRI="#Contests"/>
+        <Class IRI="#Solution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Based_On"/>
         <Class IRI="#Algorithms"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#Faster_Than"/>
+        <Class IRI="#Complexity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Listed_In"/>
+        <Class IRI="#Contests"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Lists"/>
+        <Class IRI="#Problem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#Related_To"/>
         <ObjectUnionOf>
             <Class IRI="#Problem"/>
@@ -653,12 +807,36 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Used_In"/>
-        <Class IRI="#Contests"/>
+        <Class IRI="#Solution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Uses"/>
-        <Class IRI="#Problem"/>
+        <Class IRI="#Algorithms"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Has_Attempts"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Has_Success"/>
+        <Class IRI="#Problem"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Has_Attempts"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Has_Success"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:double"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">100.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
 </Ontology>
 
 
